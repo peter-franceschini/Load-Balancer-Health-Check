@@ -7,5 +7,6 @@ namespace HealthCheck.Services
 {
     public interface IHealthService
     {
+        bool IsHealthy();
     }
 }

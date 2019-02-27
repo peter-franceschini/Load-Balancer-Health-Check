@@ -12,13 +12,24 @@ namespace HealthCheck.Controllers
     [ApiController]
     public class HealthController : ControllerBase
     {
-        private Settings Settings { get; set; }
         private IHealthService HealthService { get; set; }
 
-        public HealthController(Settings settings, IHealthService healthService)
+        public HealthController(IHealthService healthService)
         {
-            Settings = settings;
             HealthService = healthService;
+        }
+
+        [HttpGet]
+        public ActionResult Get()
+        {
+            if (HealthService.IsHealthy())
+            {
+                return StatusCode(200);
+            }
+            else
+            {
+                return StatusCode(500);
+            }
         }
     }
 }
