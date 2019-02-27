@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HealthCheck.Models;
+using HealthCheck.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,13 @@ namespace HealthCheck.Controllers
     [ApiController]
     public class HealthController : ControllerBase
     {
+        private Settings Settings { get; set; }
+        private IHealthService HealthService { get; set; }
 
+        public HealthController(Settings settings, IHealthService healthService)
+        {
+            Settings = settings;
+            HealthService = healthService;
+        }
     }
 }
