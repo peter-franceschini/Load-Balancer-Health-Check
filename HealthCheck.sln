@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck", "HealthCheck\HealthCheck.csproj", "{9AA433F6-D9D5-42E5-8421-86E293DED9E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck", "src\HealthCheck\HealthCheck.csproj", "{9AA433F6-D9D5-42E5-8421-86E293DED9E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
