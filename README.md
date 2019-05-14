@@ -1,7 +1,7 @@
-# Azure Load Balancer Health Check
+# Load Balancer Health Check
 This service is intended to be installed alongside an existing web application on each load balanced server that the application runs on, such that the application's load balancer can be configured to query this service for it's health checks. This service handles the logic of deciding whether the application is healthy or not for the load balancer to determine if the server should be sent traffic.
 
-This allows administrators to add or remove their applications from load balancers without modifying load balancer configurations, changing files in the application or logging into another portal. Simply stop the health check service in IIS (or where ever it is hosted) to remove your server frm the load balancer. Then start the health check service again to add your server back in the load balancer.
+This allows administrators to add or remove their applications from load balancers without modifying load balancer configurations, stopping their application, changing files in the application, or logging into another portal. Simply stop the health check service in IIS (or where ever it is hosted) to remove your server from the load balancer. Then start the health check service again to add your server back in the load balancer.
 
 Additionally, this service can be extended to perform more complex health check logic. 
 
